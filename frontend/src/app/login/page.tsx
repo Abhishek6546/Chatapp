@@ -28,6 +28,7 @@ const LoginPage = () => {
       toast.success(data.message);
       router.push(`/verify?email=${email}`);
     } catch (error: any) {
+      console.log("err",error)
       toast.error(error.response.data.message);
     } finally {
       setLoading(false);
